@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/book.dart';
 import '../services/api_service.dart';
+import 'book_detail_screen.dart';
 
 class BookListScreen extends StatefulWidget {
   final String listNameEncoded;
@@ -59,7 +60,12 @@ class _BookListScreenState extends State<BookListScreen> {
                     ],
                   ),
                   trailing: Text('#${book.rank}'),
-                  onTap: () => _launchAmazonUrl(book.amazonUrl),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookDetailScreen(book: book),
+                    ),
+                  ),
                 ),
               );
             },
@@ -67,9 +73,5 @@ class _BookListScreenState extends State<BookListScreen> {
         },
       ),
     );
-  }
-
-  void _launchAmazonUrl(String url) async {
-    // Implement url launching using url_launcher package
   }
 }
