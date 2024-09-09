@@ -44,6 +44,7 @@ class _PopularListsScreenState extends State<PopularListsScreen> {
                   MaterialPageRoute(
                     builder: (context) => BookListScreen(
                       listNameEncoded: list.listNameEncoded,
+                      listDisplayName: list.displayName,
                     ),
                   ),
                 ),

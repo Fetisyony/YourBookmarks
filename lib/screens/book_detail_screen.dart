@@ -18,7 +18,10 @@ class BookDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _buildBookImage(),
+            Hero(
+                  tag: book.bookImage ?? defaultImageUrl,
+                  child: _buildBookImage()
+            ),
             const SizedBox(height: 20),
             _buildBookInfo(),
             const SizedBox(height: 20),

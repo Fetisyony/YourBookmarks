@@ -5,8 +5,9 @@ import 'book_detail_screen.dart';
 
 class BookListScreen extends StatefulWidget {
   final String listNameEncoded;
+  final String listDisplayName;
 
-  const BookListScreen({super.key, required this.listNameEncoded});
+  const BookListScreen({super.key, required this.listNameEncoded, required this.listDisplayName});
 
   @override
   State<BookListScreen> createState() => _BookListScreenState();
@@ -24,7 +25,7 @@ class _BookListScreenState extends State<BookListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Book List')),
+      appBar: AppBar(title: Text(widget.listDisplayName)),
       body: FutureBuilder<List<Book>>(
         future: _booksFuture,
         builder: (context, snapshot) {
@@ -41,9 +42,13 @@ class _BookListScreenState extends State<BookListScreen> {
               return Card(
                 margin: const EdgeInsets.all(8),
                 child: ListTile(
-                  leading: book.bookImage != null
-                      ? Image.network(book.bookImage!, width: 50)
-                      : const Icon(Icons.book),
+                  leading:
+                      Hero(
+                          tag: book.bookImage ?? defaultImageUrl,
+                          child: book.bookImage != null
+                            ? Image.network(book.bookImage!, width: 60)
+                            : const Icon(Icons.book)
+                      ),
                   title: Text(book.title),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
