@@ -1,0 +1,19 @@
+{
+  "@@locale": "ru",
+  "authorPrefix": "Автор: {author}",
+  "publishedBy": "Опубликовано: {publisher}",
+  "contributor": "Соавтор: {contributor}",
+  "description": "Описание",
+  "buyOnAmazon": "Приобрести на Amazon",
+  "homeLabel": "Главная",
+  "popularLabel": "Популярное",
+  "bookTitleLabel": "Название книги",
+  "authorLabel": "Автор",
+  "enterTitleValidatorMessage": "Пожалуйста, введите название",
+  "enterAuthorValidatorMessage": "Пожалуйста, введите автора",
+  "enterNoteValidatorMessage": "Пожалуйста, введите комментарий",
+  "noteLabel": "Комментарий",
+  "saveNoteButtonLabel": "Сохранить",
+  "addNewBookNotePageTitle": "Добавить новую заметку",
+  "noNotesYet": "Здесь пока нет заметок. Нажмите +, чтобы добавить новую заметку!"
+}

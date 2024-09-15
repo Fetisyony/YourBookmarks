@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'generated/l10n/app_localizations.dart';
 import 'models/book_note.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'add_note_screen.dart';
@@ -29,8 +30,8 @@ class _HomePageState extends State<HomePage> {
         valueListenable: notesBox.listenable(),
         builder: (context, Box<BookNote> box, _) {
           if (box.isEmpty) {
-            return const Center(
-              child: Text('No notes yet. Tap + to add a new book note!'),
+            return Center(
+              child: Text(AppLocalizations.of(context)!.noNotesYet),
             );
           }
           return ListView.builder(
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('by ${note.author}'),
+                        Text(AppLocalizations.of(context)!.authorPrefix(note.author)),
                         const SizedBox(height: 4),
                         Text(note.note),
                         const SizedBox(height: 8),

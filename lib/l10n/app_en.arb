@@ -1,0 +1,45 @@
+{
+  "@@locale": "en",
+  "authorPrefix": "by {author}",
+  "@authorPrefix": {
+    "description": "Prefix for author name",
+    "placeholders": {
+      "author": {
+        "type": "String",
+        "default": "Unknown"
+      }
+    }
+  },
+  "publishedBy": "Published by: {publisher}",
+  "@publishedBy": {
+    "description": "Prefix for publisher",
+    "placeholders": {
+      "author": {
+        "type": "String"
+      }
+    }
+  },
+  "contributor": "Contributor: {contributor}",
+  "@contributor": {
+    "description": "Prefix for contributor",
+    "placeholders": {
+      "author": {
+        "type": "String",
+        "default": "Unknown"
+      }
+    }
+  },
+  "description": "Description",
+  "buyOnAmazon": "Buy on Amazon",
+  "homeLabel": "Home",
+  "popularLabel": "Popular",
+  "bookTitleLabel": "Book Title",
+  "authorLabel": "Author",
+  "enterTitleValidatorMessage": "Please enter a title",
+  "enterAuthorValidatorMessage": "Please enter an author",
+  "enterNoteValidatorMessage": "Please enter your notes",
+  "noteLabel": "Note",
+  "saveNoteButtonLabel": "Save Note",
+  "addNewBookNotePageTitle": "Add New Book Note",
+  "noNotesYet": "No notes yet. Tap + to add a new book note!"
+}

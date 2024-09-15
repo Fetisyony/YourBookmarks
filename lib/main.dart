@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:bookmarks_app/models/book_note.dart';
 import 'package:bookmarks_app/home_page.dart';
 import 'package:bookmarks_app/screens/popular_list_screen.dart';
+
+import 'generated/l10n/app_localizations.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,8 +15,6 @@ void main() async {
   Hive.registerAdapter(BookNoteAdapter());
   await Hive.openBox<BookNote>('bookNotes');
   await dotenv.load();
-  String apiKey = dotenv.env['API_KEY'] ?? '';
-  print(apiKey);
   runApp(const MyApp());
 }
 
@@ -24,6 +26,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Book Notes',
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', ''),
+        const Locale('ru', ''),
+      ],
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -53,12 +64,12 @@ class _MainNavigationState extends State<MainNavigation> {
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: const Icon(Icons.home),
+            label: AppLocalizations.of(context)!.homeLabel,
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.star),
             label: 'Popular',
           ),

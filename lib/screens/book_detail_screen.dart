@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../generated/l10n/app_localizations.dart';
 import '../models/book.dart';
 
 class BookDetailScreen extends StatelessWidget {
@@ -23,7 +24,7 @@ class BookDetailScreen extends StatelessWidget {
                   child: _buildBookImage()
             ),
             const SizedBox(height: 20),
-            _buildBookInfo(),
+            _buildBookInfo(context),
             const SizedBox(height: 20),
             _buildDescriptionSection(),
             const SizedBox(height: 30),
@@ -48,7 +49,7 @@ class BookDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildBookInfo() {
+  Widget _buildBookInfo(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -61,7 +62,7 @@ class BookDetailScreen extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          'by ${book.author}',
+          AppLocalizations.of(context)!.authorPrefix(book.author),
           style: TextStyle(
             fontSize: 18,
             color: Colors.grey[600],

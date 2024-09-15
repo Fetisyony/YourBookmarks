@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../generated/l10n/app_localizations.dart';
 import '../models/book.dart';
 import '../services/api_service.dart';
 import 'book_detail_screen.dart';
@@ -53,7 +54,9 @@ class _BookListScreenState extends State<BookListScreen> {
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('by ${book.author}'),
+                      Text(
+                        AppLocalizations.of(context)!.authorPrefix(book.author),
+                      ),
                       Text(book.publisher),
                       const SizedBox(height: 4),
                       Text(
