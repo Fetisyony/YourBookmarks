@@ -14,7 +14,7 @@
   "@publishedBy": {
     "description": "Prefix for publisher",
     "placeholders": {
-      "author": {
+      "publisher": {
         "type": "String"
       }
     }
@@ -23,7 +23,7 @@
   "@contributor": {
     "description": "Prefix for contributor",
     "placeholders": {
-      "author": {
+      "contributor": {
         "type": "String",
         "default": "Unknown"
       }
@@ -41,5 +41,6 @@
   "noteLabel": "Note",
   "saveNoteButtonLabel": "Save Note",
   "addNewBookNotePageTitle": "Add New Book Note",
-  "noNotesYet": "No notes yet. Tap + to add a new book note!"
+  "noNotesYet": "No notes yet. Tap + to add a new book note!",
+  "popularListsTitle": "Popular Collections"
 }

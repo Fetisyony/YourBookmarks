@@ -70,12 +70,12 @@ class BookDetailScreen extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          'Published by: ${book.publisher}',
+          AppLocalizations.of(context)!.publishedBy(book.publisher),
           style: const TextStyle(fontStyle: FontStyle.italic),
         ),
         const SizedBox(height: 8),
         Text(
-          'Contributor: ${book.contributor}',
+          AppLocalizations.of(context)!.contributor(book.contributor),
           style: TextStyle(color: Colors.grey[600]),
         ),
       ],

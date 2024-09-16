@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../generated/l10n/app_localizations.dart';
 import '../models/book_list.dart';
 import '../services/api_service.dart';
 import 'book_list_screen.dart';
@@ -22,7 +23,7 @@ class _PopularListsScreenState extends State<PopularListsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Popular Lists')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.popularListsTitle)),
       body: FutureBuilder<List<BookList>>(
         future: _listsFuture,
         builder: (context, snapshot) {
