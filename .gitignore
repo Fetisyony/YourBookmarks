@@ -43,3 +43,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignore ARB files (if they are generated or not meant to be committed)
+*.arb
+
+# Ignore intermediate files for localization (if applicable)
+l10n.yaml
+l10n/
