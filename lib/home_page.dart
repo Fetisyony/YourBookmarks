@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Book Notes'),
+        title: Text(AppLocalizations.of(context)!.bookNotesTitle),
       ),
       body: ValueListenableBuilder(
         valueListenable: notesBox.listenable(),

@@ -26,7 +26,7 @@ class BookDetailScreen extends StatelessWidget {
             const SizedBox(height: 20),
             _buildBookInfo(context),
             const SizedBox(height: 20),
-            _buildDescriptionSection(),
+            _buildDescriptionSection(context),
             const SizedBox(height: 30),
             _buildBuyButton(context),
           ],
@@ -82,12 +82,12 @@ class BookDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildDescriptionSection() {
+  Widget _buildDescriptionSection(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Description',
+        Text(
+          AppLocalizations.of(context)!.description,
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,

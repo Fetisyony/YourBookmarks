@@ -16,5 +16,6 @@
   "saveNoteButtonLabel": "Сохранить",
   "addNewBookNotePageTitle": "Добавить новую заметку",
   "noNotesYet": "Здесь пока нет заметок. Нажмите +, чтобы добавить новую заметку!",
-  "popularListsTitle": "Popular Collections"
+  "popularListsTitle": "Популярные коллекции",
+  "bookNotesTitle": "Заметки"
 }

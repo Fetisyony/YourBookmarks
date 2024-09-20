@@ -42,5 +42,6 @@
   "saveNoteButtonLabel": "Save Note",
   "addNewBookNotePageTitle": "Add New Book Note",
   "noNotesYet": "No notes yet. Tap + to add a new book note!",
-  "popularListsTitle": "Popular Collections"
+  "popularListsTitle": "Popular Collections",
+  "bookNotesTitle": "Book Notes"
 }
