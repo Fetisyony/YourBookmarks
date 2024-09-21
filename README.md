@@ -1,4 +1,4 @@
-# bookmarks_app
+# YourBookmarks
 
 A Flutter application that keeps your private book library and favourite quotes in one place
 
